@@ -30,21 +30,14 @@ jar {
 
 publishing {
     publications {
-        utils(MavenPublication) {
-            setGroupId "com.pavel209"
+        mavenJava(MavenPublication) {
+            setGroupId "org.example"
             artifactId "utils"
             version  "1.3.5"
             from components.java
         }
     }
-    repositories {
-        maven {
-            name = 'myRepo'
-            url = layout.buildDirectory.dir("repo")
-        }
-    }
 }
-
 
 test {
     useJUnitPlatform()
